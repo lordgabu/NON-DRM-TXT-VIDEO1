@@ -9,13 +9,13 @@ def hello_world():
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spidy Repo</title>
-    <link rel="icon" type="image/x-icon" href="https://tinypic.host/images/2025/04/23/1000058493.jpg">
+    <title>Gabu Repo</title>
+    <link rel="icon" type="image/x-icon" href="https://tinypic.host/image/2ggbw">
 </head>
 
 <body style="background-color: #000; color: #fff; font-family: monospace; text-align: center; padding-top: 60px;">
     <div class="container">
-        <a href="https://github.com/nikhilsaini098" style="text-decoration: none; color: #ff3c00;">
+        <a href="https://github.com/lordgabu" style="text-decoration: none; color: #ff3c00;">
             <p>
     />▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄<br>
     />███░████░████░████░███░██░██<br>
@@ -28,15 +28,15 @@ def hello_world():
         </a>
     </div>
 
-    <br><br><br>
+    <br><br><b
 
     <footer style="color: white; margin-top: 80px;">
         <center>
-            <img src="https://tinypic.host/images/2025/04/23/1000058493.jpg" width="240" height="120" alt="Spidy Logo">
-            <h3>Powered By SPIDY</h3>
-            <img src="https://tinypic.host/images/2025/04/23/1000058493.jpg" width="240" height="120" alt="Spidy Logo">
+            <img src="https://tinypic.host/image/2ggbw" width="240" height="120" alt="Gabu Logo">
+            <h3>Powered By GABU</h3>
+            <img src="https://tinypic.host/image/2ggbw" width="240" height="120" alt="Gabu Logo">
             <div>
-                <p style="margin-top: 10px;">© 2024 Video Downloader. All rights reserved.</p>
+                <p style="margin-top: 10px;">© 2025 Video Downloader. All rights reserved.</p>
             </div>
         </center>
     </footer>
