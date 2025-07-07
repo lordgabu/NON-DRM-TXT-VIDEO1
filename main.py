@@ -33,16 +33,16 @@ from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
 from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-photologo = 'https://tinypic.host/images/2025/04/23/1000058493.jpg'
-photoyt = 'https://tinypic.host/images/2025/03/18/YouTube-Logo.wine.png'
-photocp = 'https://tinypic.host/images/2025/03/28/IMG_20250328_133126.jpg'
+photologo = 'https://tinypic.host/image/2ggbw'
+photoyt = 'https://tinypic.host/image/2ggbw'
+photocp = 'https://tinypic.host/image/2ggbw'
 
 async def show_random_emojis(message):
     emojis = ['🐼', '🐶', '🐅', '⚡️', '🚀', '✨', '💥', '☠️', '🥂', '🍾']
     emoji_message = await message.reply_text(' '.join(random.choices(emojis, k=1)))
     return emoji_message
     
-credit ="🇸 🇵 🇮 🇩 🇾" 
+credit ="🄶🄰🄱🅄" 
 # Initialize the bot
 bot = Client(
     "bot",
@@ -58,21 +58,21 @@ keyboard = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(text="🕸️ Token", url="https://t.me/rwa_tokensbot"),
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/spidy_universe"),
+            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/gabubots"),
         ],
     ]
 )
 # Image URLs for the random image feature
 image_urls = [
-    "https://tinypic.host/images/2025/04/23/1000058493.jpg",
-    "https://tinypic.host/images/2025/04/23/1000058493.jpg",
+    "https://tinypic.host/image/2ggbw",
+    "https://tinypic.host/image/2ggbw",
     # Add more image URLs as needed
 ]
 cookies_file_path= "youtube_cookies.txt"
 @bot.on_message(filters.command(["help"]))
 async def txt_handler(client: Client, m: Message):
     await bot.send_message(m.chat.id, text= (
-        "🎉Congrats! You are using 𝗦𝗣𝗜𝗗𝗬 𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗢𝗥:\n┣\n"
+        "🎉Congrats! You are using 𝗚𝗮𝗯𝘂 𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗢𝗥:\n┣\n"
         "┣⪼01. Send /start - To Check Bot \n┣\n"
         "┣⪼02. Send /drm - for extract txt file\n┣\n"
         "┣⪼03. Send /cp - for stream txt file\n┣\n"
@@ -151,7 +151,7 @@ async def info(bot: Client, update: Message):
         disable_web_page_preview=True,
         reply_markup=BUTTONS
     )
-BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url=f"https://t.me/spidy_universe")]])
+BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url=f"https://t.me/gabubots")]])
 # /id Command - Show Group/Channel ID
 @bot.on_message(filters.command(["id"]))
 async def id_command(client, message: Message):
@@ -172,7 +172,7 @@ async def start_command(bot: Client, message: Message):
     save_user(message.from_user.id)
     random_image_url = random.choice(image_urls)
     caption = (
-        "𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠ 𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭\n\n➠ Can Extract Videos & PDFs From Your Text File and Upload to Telegram!\n\n➠ For Guide Use Command /help 📖\n\n➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : 𝗦𝗣𝗜𝗗𝗬 🕸️"
+        "𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠ 𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭\n\n➠ Can Extract Videos & PDFs From Your Text File and Upload to Telegram!\n\n➠ For Guide Use Command /help 📖\n\n➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : 𝗚𝗮𝗯𝘂 ⚡"
     )
     await bot.send_photo(
         chat_id=message.chat.id,
@@ -255,7 +255,7 @@ async def txt_handler(bot: Client, m: Message):
     x = await input.download()
     await input.delete(True)
     file_name, ext = os.path.splitext(os.path.basename(x))
-    credit = f"𝗦𝗣𝗜𝗗𝗬 🕸️"
+    credit = f"𝗚𝗮𝗯𝘂 ⚡"
     pdf_count = 0
     img_count = 0
     zip_count = 0
@@ -341,9 +341,9 @@ async def txt_handler(bot: Client, m: Message):
     raw_text3 = input3.text
     await input3.delete(True)
     # Default credit message
-    credit = "️🕸️ 𝗦𝗣𝗜𝗗𝗬 🕸️"
+    credit = "️⚡ 𝗚𝗮𝗯𝘂 ⚡"
     if raw_text3 == '1':
-        CR = '𝗦𝗣𝗜𝗗𝗬 𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗢𝗥'
+        CR = '𝗚𝗮𝗯𝘂 𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗢𝗥'
     elif raw_text3:
         CR = raw_text3
     else:
@@ -549,7 +549,7 @@ async def txt_handler(bot: Client, m: Message):
                            f'╰━━━🖼️𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 » <a href="{raw_text6}">__**Thumb Link**__</a>\n' \
                            f"━━━━━━━━━━━━━━━━━━━━━━━━\n" \
                            f"🛑**Send** /stop **to stop process**\n" \
-                           f"✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🕸️𝗦𝗣𝗜𝗗𝗬🕸️`"
+                           f"✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `⚡𝗚𝗮𝗯𝘂⚡`"
                     prog = await m.reply_text(Show, disable_web_page_preview=True)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -580,7 +580,7 @@ async def txt_handler(bot: Client, m: Message):
                        f"🔹𝙵𝚊𝚒𝚕𝚎𝚍 𝙻𝚒𝚗𝚔𝚜 » {failed_count}\n"
                        f"✅𝚂𝚝𝚊𝚝𝚞𝚜 » 𝙲𝚘𝚖𝚙𝚕𝚎𝚝𝚎𝚍\n"
                        f"━━━━━━━━━━━━━━━━━━━━\n"
-                       f"✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🕸️𝗦𝗣𝗜𝗗𝗬🕸️`")
+                       f"✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `⚡𝗚𝗮𝗯𝘂⚡`")
     
 
 @bot.on_message(filters.command(["cp"]) )
@@ -590,7 +590,7 @@ async def txt_handler(bot: Client, m: Message):
     x = await input.download()
     await input.delete(True)
     file_name, ext = os.path.splitext(os.path.basename(x))
-    credit = f"𝗦𝗣𝗜𝗗𝗬 🕷️"
+    credit = f"𝗚𝗮𝗯𝘂 ☠️"
     try:    
         with open(x, "r") as f:
             content = f.read()
@@ -639,7 +639,7 @@ async def txt_handler(bot: Client, m: Message):
 
                 if ".pdf" in url or "drive" in url or ".jpg" in url or ".jpeg" in url or ".png" in url:
                     try:
-                        await m.reply_text(text=f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🇸 🇵 🇮 🇩 🇾`', disable_web_page_preview=True, reply_markup=BUTTONSDOC)
+                        await m.reply_text(text=f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🄶🄰🄱🅄`', disable_web_page_preview=True, reply_markup=BUTTONSDOC)
                         count +=1
                     except Exception as e:
                         await m.reply_text(str(e))    
@@ -648,7 +648,7 @@ async def txt_handler(bot: Client, m: Message):
 
                 elif "classplusapp.com" in url:
                     try:
-                        await m.reply_text(text=f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🇸 🇵 🇮 🇩 🇾`', disable_web_page_preview=True, reply_markup=BUTTONSCP)
+                        await m.reply_text(text=f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🄶🄰🄱🅄`', disable_web_page_preview=True, reply_markup=BUTTONSCP)
                         count +=1
                     except Exception as e:
                         await m.reply_text(str(e))    
@@ -657,7 +657,7 @@ async def txt_handler(bot: Client, m: Message):
 
                 elif "youtu" in url:
                     try:
-                        await m.reply_text(text=f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🇸 🇵 🇮 🇩 🇾`', disable_web_page_preview=True, reply_markup=BUTTONSYT)
+                        await m.reply_text(text=f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🄶🄰🄱🅄`', disable_web_page_preview=True, reply_markup=BUTTONSYT)
                         count +=1
                     except Exception as e:
                         await m.reply_text(str(e))    
@@ -665,7 +665,7 @@ async def txt_handler(bot: Client, m: Message):
                         continue              
                 
                 else:
-                    Show = f"<pre><code>⚡Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ...⏳\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ 🇸 🇵 🇮 🇩 🇾</code></pre>"
+                    Show = f"<pre><code>⚡Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ...⏳\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ 🄶🄰🄱🅄</code></pre>"
                     prog = await m.reply_text(Show, disable_web_page_preview=True)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -676,14 +676,14 @@ async def txt_handler(bot: Client, m: Message):
                     time.sleep(3)
 
             except Exception as e:
-                await m.reply_text(text=f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🇸 🇵 🇮 🇩 🇾`', disable_web_page_preview=True, reply_markup=BUTTONSMAN)
+                await m.reply_text(text=f'——— ✨ [{str(count).zfill(3)}]({link0}) ✨ ———\n\n📔𝐓𝐢𝐭𝐥𝐞 » `{name}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🄶🄰🄱🅄`', disable_web_page_preview=True, reply_markup=BUTTONSMAN)
                 count += 1
                 time.sleep(3)
                 continue
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("<pre><code>Converted By ⌈✨『𝗦𝗣𝗜𝗗𝗬 🕷️』✨⌋</code></pre>")
+    await m.reply_text("<pre><code>Converted By ⌈✨『𝗚𝗮𝗯𝘂 ☠️』✨⌋</code></pre>")
 
 
 @bot.on_message(filters.text & filters.private & ~filters.command(["start", "help", "broadcast", "users"]))
@@ -703,7 +703,7 @@ async def text_handler(bot: Client, m: Message):
     await m.delete()
 
 
-    await editable.edit("╭━━━━❰ᴇɴᴛᴇʀ ʀᴇꜱᴏʟᴜᴛɪᴏɴ❱━━➣ \n┣━━⪼ send `144`  for 144p\n┣━━⪼ send `240`  for 240p\n┣━━⪼ send `360`  for 360p\n┣━━⪼ send `480`  for 480p\n┣━━⪼ send `720`  for 720p\n┣━━⪼ send `1080` for 1080p\n╰━━⌈⚡[`🇸 🇵 🇮 🇩 🇾`]⚡⌋━━➣ ")
+    await editable.edit("╭━━━━❰ᴇɴᴛᴇʀ ʀᴇꜱᴏʟᴜᴛɪᴏɴ❱━━➣ \n┣━━⪼ send `144`  for 144p\n┣━━⪼ send `240`  for 240p\n┣━━⪼ send `360`  for 360p\n┣━━⪼ send `480`  for 480p\n┣━━⪼ send `720`  for 720p\n┣━━⪼ send `1080` for 1080p\n╰━━⌈⚡[`🄶 🄰 🄱 🅄`]⚡⌋━━➣ ")
     input2: Message = await bot.listen(editable.chat.id, filters=filters.text & filters.user(m.from_user.id))
     raw_text2 = input2.text
     quality = f"{raw_text2}p"
@@ -815,8 +815,8 @@ async def text_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name}` [{res}].mp4\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `𝗦𝗣𝗜𝗗𝗬 𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗢𝗥`'
-                cc1 = f'📕𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `𝗦𝗣𝗜𝗗𝗬 𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗢𝗥`'
+                cc = f'🎞️𝐓𝐢𝐭𝐥𝐞 » `{name}` [{res}].mp4\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `𝗚𝗮𝗯𝘂 𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗢𝗥`'
+                cc1 = f'📕𝐓𝐢𝐭𝐥𝐞 » `{name}`\n🔗𝐋𝐢𝐧𝐤 » <a href="{link}">__**CLICK HERE**__</a>\n\n🌟𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 » `𝗚𝗮𝗯𝘂 𝗘𝗫𝗧𝗥𝗔𝗖𝗧𝗢𝗥`'
                                 
                 if "drive" in url:
                     try:
@@ -926,7 +926,7 @@ async def text_handler(bot: Client, m: Message):
                                 
                 else:
                     emoji_message = await show_random_emojis(message)
-                    Show = f"**⚡Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ...⏳**\n\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🇸 🇵 🇮 🇩 🇾`‌"
+                    Show = f"**⚡Dᴏᴡɴʟᴏᴀᴅ Sᴛᴀʀᴛᴇᴅ...⏳**\n\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🄶 🄰 🄱 🅄`‌"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
@@ -937,7 +937,7 @@ async def text_handler(bot: Client, m: Message):
                     time.sleep(1)
 
             except Exception as e:
-                    Error= f"⚠️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐮𝐩𝐭𝐞𝐝\n\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🇸 🇵 🇮 🇩 🇾`"
+                    Error= f"⚠️𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐮𝐩𝐭𝐞𝐝\n\n🔗𝐋𝐢𝐧𝐤 » `{link}`\n\n✦𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ✦ `🄶 🄰 🄱 🅄`"
                     await m.reply_text(Error)
                     count += 1
                     pass
@@ -990,7 +990,7 @@ async def handle_broadcast(client, message: Message):
 
         await message.reply("⚡ Do you want to send this message to all users?", reply_markup=preview_buttons)
     else:
-        await message.reply("❗ Reply to a message with text/photo/video to broadcast.\nYou can also add buttons like this:\n\nCaption here || [[[\"Join\",\"https://t.me/spidy\"]]]")
+        await message.reply("❗ Reply to a message with text/photo/video to broadcast.\nYou can also add buttons like this:\n\nCaption here || [[[\"Owner\",\"https://t.me/hek0r\"]]]")
 
 @bot.on_callback_query(filters.regex("broadcast_"))
 async def confirm_broadcast(client, query: CallbackQuery):
